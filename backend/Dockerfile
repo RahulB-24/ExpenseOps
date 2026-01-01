@@ -2,14 +2,15 @@
 FROM eclipse-temurin:17-jdk-alpine AS builder
 WORKDIR /app
 
-# Copy maven wrapper and pom.xml first to cache dependencies
-COPY .mvn/ .mvn/
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:go-offline
+# Copy pom.xml first to cache dependencies
+COPY pom.xml ./
+# Install Maven directly to avoid line-ending issues with mvnw wrapper on Windows
+RUN apk add --no-cache maven
+RUN mvn dependency:go-offline
 
 # Copy source code and build
 COPY src ./src
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Stage 2: Create the runtime image
 FROM eclipse-temurin:17-jre-alpine
