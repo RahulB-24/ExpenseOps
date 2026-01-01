@@ -168,6 +168,56 @@ Use the Swagger UI to interactively explore endpoints, test requests, and view d
 
 ---
 
+---
+
+## Cloud Deployment
+
+ExpenseOps is designed for cloud-native deployment using Docker containers and modern PaaS providers.
+
+### 1. Docker Containerization
+The backend is fully containerized using a multi-stage `Dockerfile`.
+*   **Build Stage**: Uses Maven to compile the application.
+*   **Run Stage**: Uses a lightweight **Alpine Linux** JRE image (Eclipse Temurin) to keep the final image size under 350MB, optimized for resource-constrained environments.
+
+### 2. Backend Hosting (Render)
+The Spring Boot backend is deployed on **Render** (Platform as a Service).
+*   **Service Type**: Web Service (Docker Runtime).
+*   **Health Checks**: Configured to monitor `/actuator/health` for zero-downtime updates.
+*   **Environment**: Secrets (DB credentials, JWT keys) are securely managed via Render Environment Variables.
+
+### 3. Frontend Hosting (Vercel)
+The React frontend is deployed on **Vercel** Global Edge Network.
+*   **Build Settings**: `npm run build` (Vite).
+*   **Routing**: Configured via `vercel.json` to handle Single Page Application (SPA) routing.
+*   **Integration**: Connects to the backend via `VITE_API_BASE_URL` env var.
+
+---
+
+## Gallery
+
+<div align="center">
+  <img width="800" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/cf9024d3-e655-4a30-81d2-0d064df5d509" />
+  <p><em>Executive Dashboard with Real-time Analytics</em></p>
+  <br/>
+  
+  <img width="800" alt="Expense Management" src="https://github.com/user-attachments/assets/87bda24c-1ce1-4c15-969e-7033d6716de4" />
+  <p><em>Comprehensive Expense Tracking & Filtering</em></p>
+  <br/>
+  
+  <img width="800" alt="Approval Workflow" src="https://github.com/user-attachments/assets/7d7730d0-ad5e-430e-bb8b-b35912dcdba8" />
+  <p><em>Manager Approval Interface</em></p>
+  <br/>
+  
+  <img width="800" alt="Mobile Responsive" src="https://github.com/user-attachments/assets/1ccfa828-daf4-4341-af00-81ecd06b5d44" />
+  <p><em>Clean, Responsive Login Experience</em></p>
+  <br/>
+  
+  <img width="800" alt="Reporting" src="https://github.com/user-attachments/assets/2016dfa2-50cc-4551-be68-89349df41589" />
+  <p><em>Detailed Financial Reporting</em></p>
+</div>
+
+---
+
 ## License
 
 **Developed by Rahul Balachandar**
