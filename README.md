@@ -197,19 +197,19 @@ The React frontend is deployed on **Vercel** Global Edge Network.
 
 <div align="center">
   <img width="800" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/cf9024d3-e655-4a30-81d2-0d064df5d509" />
-  <p><em>Executive Dashboard with Real-time Analytics</em></p>
+  <p><em>Executive Dashboard with Real-time Status Tracking</em></p>
   <br/>
   
   <img width="800" alt="Expense Management" src="https://github.com/user-attachments/assets/87bda24c-1ce1-4c15-969e-7033d6716de4" />
-  <p><em>Comprehensive Expense Tracking & Filtering</em></p>
+  <p><em>Comprehensive Admin Panel and Filtering</em></p>
   <br/>
   
   <img width="800" alt="Approval Workflow" src="https://github.com/user-attachments/assets/7d7730d0-ad5e-430e-bb8b-b35912dcdba8" />
-  <p><em>Manager Approval Interface</em></p>
+  <p><em>Finance Reimbursement Processing</em></p>
   <br/>
   
   <img width="800" alt="Mobile Responsive" src="https://github.com/user-attachments/assets/1ccfa828-daf4-4341-af00-81ecd06b5d44" />
-  <p><em>Clean, Responsive Login Experience</em></p>
+  <p><em>Real time Expense Analysis</em></p>
   <br/>
   
   <img width="800" alt="Reporting" src="https://github.com/user-attachments/assets/2016dfa2-50cc-4551-be68-89349df41589" />
